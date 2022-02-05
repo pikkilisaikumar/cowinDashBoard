@@ -1,0 +1,63 @@
+.background-overall-container-one {
+  background-color: #161625;
+  min-height: 100vh;
+  padding: 20px;
+}
+.website-logo-container-one {
+  display: flex;
+  align-items: center;
+}
+.tail-loader-container-one {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.someting-went-wrong-heading {
+  font-family: Bree Serif;
+  color: white;
+  font-size: 28px;
+}
+
+.tail-loader-container-one1 {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.failure-view-styling {
+  height: 300px;
+  width: 300px;
+}
+.website-logo-styling {
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+.co-win-paragraph {
+  color: #2cc6c6;
+  font-family: Roboto;
+}
+
+.vacination-coverage-paragraph {
+  color: white;
+  font-family: Roboto;
+  font-size: 18px;
+}
+
+.cowin-vacination-india-paragraph {
+  color: white;
+  font-family: Roboto;
+  font-size: 23px;
+}
+.vacination-coverage-container {
+  background-color: lightblue;
+  padding: 10px;
+  margin-bottom: 30px;
+}
