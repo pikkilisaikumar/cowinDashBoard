@@ -16,9 +16,7 @@ const apiStatusChange = {
 
 class CowinDashboard extends Component {
   state = {
-    lastsevenvaccination: [],
-    vaccinationage: [],
-    vacinationgender: [],
+    cowinDashData: {},
     apiStatus: apiStatusChange.intial,
   }
 
@@ -51,10 +49,15 @@ class CowinDashboard extends Component {
         dose2: each.dose_2,
         vaccineDate: each.vaccine_date,
       }))
-      this.setState({
+
+      const overallData = {
         lastsevenvaccination: last7daysdata,
         vaccinationage: vaccinationByAge,
         vacinationgender: vaccinationByGender,
+      }
+
+      this.setState({
+        cowinDashData: overallData,
         apiStatus: apiStatusChange.success,
       })
     } else {
@@ -65,9 +68,15 @@ class CowinDashboard extends Component {
   }
 
   rendersuccess = () => {
-    const {lastsevenvaccination, vacinationgender, vaccinationage} = this.state
+    const {cowinDashData} = this.state
+    const {
+      lastsevenvaccination,
+      vacinationgender,
+      vaccinationage,
+    } = cowinDashData
+
     return (
-      <div>
+      <>
         <div className="vacination-coverage-container">
           <VaccinationCoverage lastsevenvaccination={lastsevenvaccination} />
         </div>
@@ -78,7 +87,7 @@ class CowinDashboard extends Component {
         <div className="vacination-coverage-container">
           <VaccinationByAge vaccinationage={vaccinationage} />
         </div>
-      </div>
+      </>
     )
   }
 

@@ -1,0 +1,7 @@
+.vacinationbyage-containerone {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
